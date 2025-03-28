@@ -66,10 +66,10 @@ class Record:
 
 class AddressBook(UserDict):
     def add_record(self, record):
-         if not self.data.get(record.name.value):
+        if not self.data.get(record.name.value):
             self.data[record.name.value] = record
             return
-         print(f"Record {record.name.value} already exists.")
+        print(f"Record {record.name.value} already exists.")
 
     def find(self, name):
         return self.data.get(name, print(f"Record {name} not found."))
